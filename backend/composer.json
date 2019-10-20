@@ -1,0 +1,25 @@
+{
+    "name": "nejtr0n/infura",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nejtr0n",
+            "email": "a6y@xakep.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "ratchet/pawl": "^0.3.4",
+        "monolog/monolog": "^2.0",
+        "laravel/helpers": "^1.1",
+        "php-di/php-di": "^6.0",
+        "cboden/ratchet": "^0.4.1",
+        "clue/redis-react": "^2.3",
+        "ext-json": "*",
+        "ext-pcntl": "*"
+    }
+}

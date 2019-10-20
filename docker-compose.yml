@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+  infura:
+    build: ./backend
+    command: ["php", "/app/pkg/infura.php"]
+    environment:
+      - APP_REDIS_HOST=redis://redis:6379
+
+  server:
+    build: ./backend
+    command: ["php", "/app/pkg/server.php"]
+    ports:
+      - 8080:8080
+    environment:
+      - APP_REDIS_HOST=redis://redis:6379
+      - APP_HTTP_HOST=localhost
+      - APP_HTTP_PORT=8080
+
+  front:
+    build: ./frontend
+    ports:
+      - 8000:80
+
+  redis:
+    image: redis:latest
